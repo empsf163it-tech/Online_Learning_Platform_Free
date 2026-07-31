@@ -17,7 +17,12 @@
         <a href="index.html" class="logo">
             <span class="logo-icon">✦</span> CourseNest
         </a>
-        <nav class="nav-links">
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="courses.html">Courses</a>
@@ -26,26 +31,70 @@
         </nav>
     </header>
 
-    <!-- FAQ Section -->
-    <section class="section-padding">
+    <!-- Section 1: Platform Basics FAQ -->
+    <section class="section-padding animate-up">
         <div class="section-header">
-            <h2>Frequently Asked Questions</h2>
-            <p>Quick answers to common questions about CourseNest tutorials.</p>
+            <span class="category-badge">Basics</span>
+            <h2>Platform Questions</h2>
+            <p>Get answers to general account creation and system queries.</p>
         </div>
-
-        <div class="faq-list animate-up">
+        <div class="faq-list">
             <div class="faq-item">
                 <h3>Are the courses completely online?</h3>
                 <p>Yes. All lessons, projects, and assessments are 100% online. You can learn from anywhere at your own pace.</p>
             </div>
             <div class="faq-item">
+                <h3>How do I create a free student account?</h3>
+                <p>Simple: click on any "Start Course" button on our catalog and input your name and email to initialize your lessons.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Coursework & Certification FAQ -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--card-bg);">
+        <div class="section-header">
+            <span class="category-badge">Academics</span>
+            <h2>Certifications & Quizzes</h2>
+            <p>Learn about grading criteria and standard certification documentation.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
                 <h3>Do I get a certificate after completion?</h3>
                 <p>Absolutely! Once you complete all module videos and score above 70% in the coursework quizzes, you will receive a digital certificate.</p>
             </div>
             <div class="faq-item">
+                <h3>Can I retake final course assessments if I fail?</h3>
+                <p>Yes, you can retake the assessments after a cool-down period of 24 hours. Tutors recommend re-watching previous video exercises before retaking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Technical Access FAQ -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="section-header">
+            <span class="category-badge">Technical</span>
+            <h2>Support & Devices</h2>
+            <p>Read specifications on browser compatibility and offline access limitations.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
                 <h3>Is there any support if I get stuck?</h3>
                 <p>Yes, our student forum is open to ask queries, discuss challenges, and share homework solutions with fellow learners.</p>
             </div>
+            <div class="faq-item">
+                <h3>Can I download video lessons for offline view?</h3>
+                <p>Offline video streaming is not supported on the free template. However, you can save code sheets, project files, and slides locally.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Helpdesk Assistance -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--card-bg); text-align: center;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <span class="category-badge">Support Desk</span>
+            <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 20px;">Still Have Unresolved Questions?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 32px;">If you couldn't find the answers you need in our listings, reach out directly to our customer help desk.</p>
+            <a href="contact.html" class="btn-primary">Contact Support Team</a>
         </div>
     </section>
 

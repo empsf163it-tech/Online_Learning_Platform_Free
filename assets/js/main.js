@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         courseSearch.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
             const courseCards = document.querySelectorAll('.course-card');
-            
+
             courseCards.forEach(card => {
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 const description = card.querySelector('p').textContent.toLowerCase();
-                
+
                 if (title.includes(query) || description.includes(query)) {
                     card.style.display = 'block';
                 } else {

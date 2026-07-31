@@ -17,7 +17,12 @@
         <a href="index.html" class="logo">
             <span class="logo-icon">✦</span> CourseNest
         </a>
-        <nav class="nav-links">
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="courses.html" class="active">Courses</a>
@@ -26,47 +31,178 @@
         </nav>
     </header>
 
-    <!-- Catalog Section -->
-    <section class="section-padding">
-        <div class="section-header">
+    <!-- Section 1: Search & Filters -->
+    <section class="section-padding animate-up" style="background-color: var(--white);">
+        <div class="section-header" style="margin-bottom: 0;">
+            <span class="category-badge">Our Catalog</span>
             <h2>Course Catalog</h2>
             <p>Find the right learning program for your educational goals.</p>
-            <div style="margin-top: 25px;">
-                <input type="text" id="course-search" placeholder="Search courses by name..." style="width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 99px; border: 1px solid var(--border-color); outline: none;">
+            <div style="margin-top: 32px;">
+                <input type="text" id="course-search" placeholder="Search courses by name or topic...">
             </div>
         </div>
+    </section>
 
+    <!-- Section 2: Main Catalog Grid -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
         <div class="grid-3">
             <!-- Card 1 -->
             <div class="card course-card">
-                <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22 viewBox=%220 0 400 250%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%237c3aed%22 opacity=%220.1%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2220%22 fill=%22%237c3aed%22>Web Development</text></svg>" alt="Web Development Course">
-                <div class="course-meta">
-                    <span>12 Weeks</span>
-                    <span style="color: var(--primary-color); font-weight: 700;">Beginner</span>
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&h=250&q=80" alt="Web Development Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>12 Weeks</span>
+                        <span>Beginner</span>
+                    </div>
+                    <h3>Introduction to Web Development</h3>
+                    <p>Learn the basics of HTML5, CSS3, JavaScript, and modern responsive website layout construction.</p>
+                    <a href="#" class="btn-primary" style="margin-top: auto; text-align: center;">Start Course</a>
                 </div>
-                <h3>Introduction to Web Development</h3>
-                <p>Learn the basics of HTML5, CSS3, JavaScript, and modern responsive website layout construction.</p>
             </div>
             <!-- Card 2 -->
             <div class="card course-card">
-                <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22 viewBox=%220 0 400 250%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%2310b981%22 opacity=%220.1%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2220%22 fill=%22%2310b981%22>Data Science</text></svg>" alt="Data Science Course">
-                <div class="course-meta">
-                    <span>16 Weeks</span>
-                    <span style="color: var(--primary-color); font-weight: 700;">Intermediate</span>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80" alt="Data Science Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>16 Weeks</span>
+                        <span>Intermediate</span>
+                    </div>
+                    <h3>Python for Data Analysis</h3>
+                    <p>Discover data manipulation, visualization, libraries like Pandas, NumPy, and basic machine learning concepts.</p>
+                    <a href="#" class="btn-primary" style="margin-top: auto; text-align: center;">Start Course</a>
                 </div>
-                <h3>Python for Data Analysis</h3>
-                <p>Discover data manipulation, visualization, libraries like Pandas, NumPy, and basic machine learning concepts.</p>
             </div>
             <!-- Card 3 -->
             <div class="card course-card">
-                <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22 viewBox=%220 0 400 250%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23f59e0b%22 opacity=%220.1%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2220%22 fill=%22%23f59e0b%22>Digital Marketing</text></svg>" alt="Marketing Course">
-                <div class="course-meta">
-                    <span>8 Weeks</span>
-                    <span style="color: var(--primary-color); font-weight: 700;">Beginner</span>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&h=250&q=80" alt="Marketing Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>8 Weeks</span>
+                        <span>Beginner</span>
+                    </div>
+                    <h3>Digital Marketing Fundamentals</h3>
+                    <p>Understand search engine optimization, content marketing strategy, social media campaigns, and analytics tracking.</p>
+                    <a href="#" class="btn-primary" style="margin-top: auto; text-align: center;">Start Course</a>
                 </div>
-                <h3>Digital Marketing Fundamentals</h3>
-                <p>Understand search engine optimization, content marketing strategy, social media campaigns, and analytics tracking.</p>
             </div>
+            <!-- Card 4 -->
+            <div class="card course-card">
+                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=400&h=250&q=80" alt="UX/UI Design Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>8 Weeks</span>
+                        <span>Beginner</span>
+                    </div>
+                    <h3>UX/UI Design Essentials</h3>
+                    <p>Master user research, wireframing, high-fidelity prototyping, and modern interface design systems using Figma.</p>
+                    <a href="#" class="btn-primary" style="margin-top: auto; text-align: center;">Start Course</a>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card course-card">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=400&h=250&q=80" alt="Mobile App Development Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>14 Weeks</span>
+                        <span>Intermediate</span>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Build cross-platform applications for iOS and Android using Flutter, Dart, state management, and cloud databases.</p>
+                    <a href="#" class="btn-primary" style="margin-top: auto; text-align: center;">Start Course</a>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card course-card">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=400&h=250&q=80" alt="Cloud Computing Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>10 Weeks</span>
+                        <span>Beginner</span>
+                    </div>
+                    <h3>Cloud Computing Fundamentals</h3>
+                    <p>Learn core infrastructure services, deployment methodologies, database hosting, and basic security in cloud networks.</p>
+                    <a href="#" class="btn-primary" style="margin-top: auto; text-align: center;">Start Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Recommended Paths -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--white);">
+        <div class="section-header">
+            <span class="category-badge">Guide</span>
+            <h2>How to Choose Your Path</h2>
+            <p>Follow our structured methodology to transition into a new tech career field.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card step-card">
+                <div class="step-header">
+                    <div class="step-number">01</div>
+                    <h3>Enroll & Learn</h3>
+                </div>
+                <p>Register for any free course and complete the weekly video lectures and tasks.</p>
+            </div>
+            <div class="card step-card">
+                <div class="step-header">
+                    <div class="step-number">02</div>
+                    <h3>Build Projects</h3>
+                </div>
+                <p>Submit course code challenges and build simple portfolio projects to test your skills.</p>
+            </div>
+            <div class="card step-card">
+                <div class="step-header">
+                    <div class="step-number">03</div>
+                    <h3>Get Certified</h3>
+                </div>
+                <p>Take the final assessment quiz, score above 70%, and receive a digital certificate.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Tier Feature Comparison -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="section-header">
+            <span class="category-badge">Tiers</span>
+            <h2>Plan Capabilities</h2>
+            <p>See what features are included in each of our platform templates.</p>
+        </div>
+        <div style="overflow-x: auto; width: 100%; border: 1px solid var(--border-color); background-color: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--text-color); font-weight: 700;">
+                        <th style="padding: 16px 24px;">Features</th>
+                        <th style="padding: 16px 24px;">Free</th>
+                        <th style="padding: 16px 24px;">Premium</th>
+                        <th style="padding: 16px 24px;">Luxury</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 16px 24px; font-weight: 600;">HTML Pages Included</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">5 Pages</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">8 Pages</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">12 Pages</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 16px 24px; font-weight: 600;">Styling Theme</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">Scandinavian Minimal</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">Bento Grid Style</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">Premium Luxury</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 16px 24px; font-weight: 600;">Dark Mode Toggler</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">&#10007;</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">&#10003; (With local storage)</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">&#10003; (Glassmorphism layout)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 16px 24px; font-weight: 600;">Advanced Interactions</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">Basic text filtering</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">Estimator, RTL layouts</td>
+                        <td style="padding: 16px 24px; color: var(--text-muted);">Sparklines, Live Concierge, Table Adder</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 

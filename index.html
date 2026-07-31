@@ -17,7 +17,12 @@
         <a href="index.html" class="logo">
             <span class="logo-icon">✦</span> CourseNest
         </a>
-        <nav class="nav-links">
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="courses.html">Courses</a>
@@ -26,27 +31,28 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Section 1: Hero Section -->
     <section class="hero animate-up">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center; text-align: left; max-width: 1200px; margin: 0 auto; width: 100%;">
-            <div class="hero-content" style="text-align: left; margin: 0;">
+        <div class="hero-grid">
+            <div class="hero-content">
                 <span class="category-badge">Start Learning Today</span>
                 <h1>Develop New Skills Online with CourseNest</h1>
-                <p class="hero-lead" style="text-align: left;">Access high-quality tutorial courses built by industry experts. Learn at your own pace anytime, anywhere.</p>
-                <div class="hero-actions" style="justify-content: flex-start;">
+                <p class="hero-lead">Access high-quality tutorial courses built by industry experts. Learn at your own pace anytime, anywhere.</p>
+                <div class="hero-actions">
                     <a href="courses.html" class="btn-primary">Browse Courses</a>
                     <a href="about.html" class="btn-secondary">Learn More</a>
                 </div>
             </div>
-            <div>
-                <img src="./assets/images/hero.png" alt="CourseNest Hero Illustration" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&h=450&q=80" alt="CourseNest Hero Illustration">
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Section 2: Features Section -->
     <section class="section-padding">
         <div class="section-header">
+            <span class="category-badge">Features</span>
             <h2>Why Choose CourseNest?</h2>
             <p>We provide a reliable platform for learning and self-improvement.</p>
         </div>
@@ -66,6 +72,104 @@
                 <h3>Certification</h3>
                 <p>Earn a standard certificate of completion to share with employers and add to your resume.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Popular Courses Preview -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="section-header">
+            <span class="category-badge">Popular Courses</span>
+            <h2>Start with Our Top Tracks</h2>
+            <p>Explore beginner-friendly courses recommended by our students.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card course-card">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&h=250&q=80" alt="Web Development Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>12 Weeks</span>
+                        <span>Beginner</span>
+                    </div>
+                    <h3>Introduction to Web Development</h3>
+                    <p>Learn HTML5, CSS3, JavaScript, and responsive design layouts.</p>
+                    <a href="courses.html" class="btn-primary" style="text-align: center;">View Details</a>
+                </div>
+            </div>
+            <div class="card course-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=250&q=80" alt="Data Science Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>16 Weeks</span>
+                        <span>Intermediate</span>
+                    </div>
+                    <h3>Python for Data Analysis</h3>
+                    <p>Discover data manipulation, Pandas, NumPy, and visualization.</p>
+                    <a href="courses.html" class="btn-primary" style="text-align: center;">View Details</a>
+                </div>
+            </div>
+            <div class="card course-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&h=250&q=80" alt="Marketing Course">
+                <div class="course-card-content">
+                    <div class="course-meta">
+                        <span>8 Weeks</span>
+                        <span>Beginner</span>
+                    </div>
+                    <h3>Digital Marketing Fundamentals</h3>
+                    <p>Understand SEO, content strategies, and web analytics tracking.</p>
+                    <a href="courses.html" class="btn-primary" style="text-align: center;">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Testimonials -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--white);">
+        <div class="section-header">
+            <span class="category-badge">Reviews</span>
+            <h2>What Our Learners Say</h2>
+            <p>Read honest feedback from students who leveled up their skills with us.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <p style="font-style: italic; margin-bottom: 24px;">"The Web Development path was structured incredibly well. Going from zero coding experience to launching my first responsive site in a few weeks was amazing."</p>
+                <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="Sarah Jenkins Avatar" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                    <div>
+                        <h4 style="font-weight: 700;">Sarah Jenkins</h4>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Front-End Developer Intern</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <p style="font-style: italic; margin-bottom: 24px;">"Excellent explanations. The Python course didn't skip intermediate steps, and the exercises felt like real tasks I would encounter in the workplace."</p>
+                <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="David Chen Avatar" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                    <div>
+                        <h4 style="font-weight: 700;">David Chen</h4>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Junior Data Analyst</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <p style="font-style: italic; margin-bottom: 24px;">"I enjoyed the bite-sized video lessons and structured quizzes. It made learning digital marketing concepts easy to fit into a busy full-time work schedule."</p>
+                <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Marcus Aurelius Avatar" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+                    <div>
+                        <h4 style="font-weight: 700;">Marcus Aurelius</h4>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Product Marketing Manager</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Call to Action -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); text-align: center;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <span class="category-badge">Get Started</span>
+            <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 20px;">Ready to Begin Your Learning Journey?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 32px;">Join thousands of students and build high-demand skills completely free of charge. Start studying today.</p>
+            <a href="courses.html" class="btn-primary">Browse All Courses</a>
         </div>
     </section>
 

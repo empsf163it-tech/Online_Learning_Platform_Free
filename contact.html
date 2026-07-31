@@ -17,7 +17,12 @@
         <a href="index.html" class="logo">
             <span class="logo-icon">✦</span> CourseNest
         </a>
-        <nav class="nav-links">
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="courses.html">Courses</a>
@@ -26,14 +31,15 @@
         </nav>
     </header>
 
-    <!-- Contact Form Section -->
-    <section class="section-padding">
+    <!-- Section 1: Contact Form Section -->
+    <section class="section-padding animate-up">
         <div class="section-header">
-            <h2>Get In Touch</h2>
+            <span class="category-badge">Get In Touch</span>
+            <h2>Send a Message</h2>
             <p>Have questions about registration, courses, or certificates? Contact our support staff.</p>
         </div>
 
-        <div class="contact-container animate-up">
+        <div class="contact-container">
             <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Full Name</label>
@@ -48,6 +54,71 @@
                     <textarea id="message" rows="5" required placeholder="Write your questions here..."></textarea>
                 </div>
                 <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 2: Direct Office Info -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--card-bg);">
+        <div class="section-header">
+            <span class="category-badge">Details</span>
+            <h2>Direct Communications</h2>
+            <p>Skip the form and communicate with our departments directly through these channels.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Support Help Desk</h3>
+                <p style="margin-bottom: 12px; color: var(--text-color); font-weight: 700;">support@coursenest.com</p>
+                <p>Response time: Under 24 hours on business days.</p>
+            </div>
+            <div class="card">
+                <h3>Tutor Partnerships</h3>
+                <p style="margin-bottom: 12px; color: var(--text-color); font-weight: 700;">instructors@coursenest.com</p>
+                <p>For course submissions and teaching inquiries.</p>
+            </div>
+            <div class="card">
+                <h3>Operations Hours</h3>
+                <p style="margin-bottom: 12px; color: var(--text-color); font-weight: 700;">Monday - Friday</p>
+                <p>9:00 AM to 5:00 PM GMT. Closed on public holidays.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: FAQ Quick Links -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="section-header">
+            <span class="category-badge">Quick Help</span>
+            <h2>Immediate Answer Shortcuts</h2>
+            <p>Most common student questions are already solved. Check these sections immediately.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <h3>How do I reset my password?</h3>
+                <p style="margin-bottom: 16px;">Learn how to easily recover your credentials via account settings page.</p>
+                <a href="faq.html" class="btn-secondary" style="text-align: center; font-size: 0.85rem; padding: 8px 16px;">View Answer</a>
+            </div>
+            <div class="card">
+                <h3>Certificate validation?</h3>
+                <p style="margin-bottom: 16px;">How to share and verify course completion certificates with employers.</p>
+                <a href="faq.html" class="btn-secondary" style="text-align: center; font-size: 0.85rem; padding: 8px 16px;">View Answer</a>
+            </div>
+            <div class="card">
+                <h3>Offline lecture viewing?</h3>
+                <p style="margin-bottom: 16px;">Find details regarding local file downloads and slide accessibility options.</p>
+                <a href="faq.html" class="btn-secondary" style="text-align: center; font-size: 0.85rem; padding: 8px 16px;">View Answer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Newsletter Subscription -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--card-bg); text-align: center;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <span class="category-badge">Newsletter</span>
+            <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 20px;">Stay Updated on New Courses</h2>
+            <p style="color: var(--text-muted); margin-bottom: 32px;">Subscribe to our weekly minimalist digest letter to learn when new experts publish courses on our platform.</p>
+            <form style="display: flex; gap: 8px; justify-content: center; width: 100%; flex-wrap: wrap;">
+                <input type="email" required placeholder="Enter your email" style="padding: 14px 20px; border: 1px solid var(--border-color); outline: none; flex-grow: 1; max-width: 320px; font-family: inherit; font-size: 0.95rem;">
+                <button type="submit" class="btn-primary">Subscribe</button>
             </form>
         </div>
     </section>

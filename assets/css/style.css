@@ -1,4 +1,4 @@
-/* CourseNest - Free Tier Stylesheet */
+/* CourseNest - Free Tier Stylesheet (Vibrant Violet Style) */
 
 :root {
     --primary-color: #7c3aed;
@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -32,6 +32,12 @@ a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Navbar */
@@ -45,6 +51,7 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
+    height: 80px;
 }
 
 .logo {
@@ -65,6 +72,7 @@ a {
     align-items: center;
     gap: 25px;
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .nav-links a:hover,
@@ -84,17 +92,62 @@ a {
     background-color: var(--primary-hover);
 }
 
-/* Hero */
+/* Mobile Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: var(--transition);
+}
+
+/* Hero Section */
 .hero {
     padding: 80px 8%;
     background: linear-gradient(135deg, #f5f3ff 0%, #f1f5f9 100%);
-    text-align: center;
     border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 48px;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
+}
+
+.category-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    background-color: #ede9fe;
+    padding: 6px 12px;
+    border-radius: 99px;
 }
 
 .hero h1 {
@@ -109,15 +162,17 @@ a {
     font-size: 1.15rem;
     color: var(--text-muted);
     margin-bottom: 30px;
+    max-width: 500px;
 }
 
 .hero-actions {
     display: flex;
-    justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
+    display: inline-block;
     padding: 12px 24px;
     border-radius: var(--radius-md);
     background-color: var(--primary-color);
@@ -135,6 +190,7 @@ a {
 }
 
 .btn-secondary {
+    display: inline-block;
     padding: 12px 24px;
     border-radius: var(--radius-md);
     background-color: transparent;
@@ -147,6 +203,23 @@ a {
 
 .btn-secondary:hover {
     background-color: rgba(0,0,0,0.03);
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.hero-image-container img {
+    max-width: 100%;
+    max-height: 55vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
 }
 
 /* Sections */
@@ -184,6 +257,8 @@ a {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -208,19 +283,55 @@ a {
     font-size: 0.95rem;
 }
 
+/* Step Card Premium Layout */
+.step-card {
+    position: relative;
+    padding: 36px 30px;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #ede9fe;
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-header h3 {
+    margin-bottom: 0;
+}
+
 /* Course Listing Grid */
 .course-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.course-card-content {
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex-grow: 1;
 }
 
 .course-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: var(--radius-md);
-    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .course-meta {
@@ -230,6 +341,34 @@ a {
     color: var(--text-muted);
     margin-bottom: 10px;
     font-weight: 500;
+}
+
+.course-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    margin-bottom: 20px;
+}
+
+/* Search Bar */
+#course-search {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    border-radius: 99px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+#course-search:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
 
 /* Info Forms & Contacts */
@@ -274,7 +413,7 @@ a {
     box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
 
-/* FAQ Accordion */
+/* FAQ Layout */
 .faq-list {
     max-width: 700px;
     margin: 0 auto;
@@ -301,7 +440,7 @@ a {
     font-size: 0.95rem;
 }
 
-/* About Section */
+/* About Section Grid & Images */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -320,8 +459,19 @@ a {
     margin-bottom: 20px;
 }
 
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
 .about-image img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 55vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
 }
@@ -332,8 +482,8 @@ a {
     color: #94a3b8;
     text-align: center;
     padding: 40px;
-    border-top: 1px solid var(--border-color);
     margin-top: 60px;
+    border-top: 1px solid var(--border-color);
 }
 
 /* Animations */
@@ -346,45 +496,69 @@ a {
     animation: slideUp 0.6s ease-out forwards;
 }
 
-/* Responsive */
+/* Card Action Bottom Alignment Rules */
+.card > *:last-child,
+.course-card-content > *:last-child,
+.card > a.btn-primary:last-of-type,
+.course-card-content > a.btn-primary:last-of-type {
+    margin-top: auto !important;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 5%;
-        flex-direction: column;
-        gap: 15px;
+    .hamburger {
+        display: flex;
     }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--border-color);
+        padding: 24px 8%;
+        gap: 20px;
+        align-items: flex-start;
+        box-shadow: 0 10px 15px -10px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.open {
+        display: flex;
+        animation: slideUp 0.3s ease-out forwards;
+    }
+
+    .nav-links a {
+        width: 100%;
+    }
+
+    .btn-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 40px 8%;
+        min-height: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
     }
+
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 32px;
     }
+
     .section-padding {
-        padding: 50px 5%;
+        padding: 48px 8%;
     }
-}
-
-/* Card Action Bottom Alignment Rules */
-.card, .tier-card, .course-card, .pricing-card {
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-.course-card-content {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-grow: 1 !important;
-}
-
-.card > *:last-child,
-.course-card-content > *:last-child,
-.tier-card > *:last-child,
-.pricing-card > *:last-child,
-.card > a.btn-primary:last-of-type,
-.course-card-content > a.btn-primary:last-of-type,
-.pricing-card > a.btn-primary:last-of-type,
-.tier-action {
-    margin-top: auto !important;
-    padding-top: 15px;
 }

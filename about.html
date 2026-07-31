@@ -17,7 +17,12 @@
         <a href="index.html" class="logo">
             <span class="logo-icon">✦</span> CourseNest
         </a>
-        <nav class="nav-links">
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html" class="active">About</a>
             <a href="courses.html">Courses</a>
@@ -26,16 +31,96 @@
         </nav>
     </header>
 
-    <!-- About Section -->
-    <section class="section-padding">
+    <!-- Section 1: Mission & Vision -->
+    <section class="section-padding animate-up">
         <div class="about-grid">
             <div class="about-content">
-                <h2>Our Mission to Share Knowledge</h2>
+                <span class="category-badge">Our Mission</span>
+                <h2>Sharing Knowledge Worldwide</h2>
                 <p>CourseNest was founded with the vision of making premium technology and business skills accessible to anyone with an internet connection. We partner with expert tutors to create high-quality lessons.</p>
                 <p>Whether you're starting a new career path, building a personal project, or leveling up your professional qualifications, our courses are structured to help you reach your goals systematically.</p>
             </div>
             <div class="about-image">
                 <img src="./assets/images/about.png" alt="Online Learning Classroom">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Platform Statistics -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--card-bg);">
+        <div class="section-header">
+            <span class="category-badge">Metrics</span>
+            <h2>Our Impact in Numbers</h2>
+            <p>We are proud to serve learners globally as they upgrade their professional skills.</p>
+        </div>
+        <div class="grid-3" style="text-align: center;">
+            <div class="card" style="padding: 40px 20px;">
+                <h3 style="font-size: 3rem; font-weight: 800; margin-bottom: 8px;">250K+</h3>
+                <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; font-weight: 700;">Active Learners</p>
+            </div>
+            <div class="card" style="padding: 40px 20px;">
+                <h3 style="font-size: 3rem; font-weight: 800; margin-bottom: 8px;">80+</h3>
+                <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; font-weight: 700;">Tutorial Courses</p>
+            </div>
+            <div class="card" style="padding: 40px 20px;">
+                <h3 style="font-size: 3rem; font-weight: 800; margin-bottom: 8px;">150+</h3>
+                <p style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; font-weight: 700;">Industry Instructors</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Learning Methodology -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color);">
+        <div class="section-header">
+            <span class="category-badge">Methodology</span>
+            <h2>How We Teach</h2>
+            <p>Our courses are designed around modern learning habits to yield real results.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Bite-Sized Lessons</h3>
+                <p>Videos are kept short and focused, so you can study complex topics incrementally without feeling overwhelmed.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔨</div>
+                <h3>Hands-On Practice</h3>
+                <p>Every module finishes with an interactive practical code challenge or real-world scenario analysis project.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Peer Forum Interaction</h3>
+                <p>Ask questions in public course forums to clear doubts quickly with the help of other students and tutors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Join Us / Careers -->
+    <section class="section-padding" style="border-top: 1px solid var(--border-color); background-color: var(--card-bg);">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="category-badge">Instructors</span>
+                <h2>Teach on CourseNest</h2>
+                <p>Are you an expert programmer, digital marketer, or designer? Share your skills with our global student community and help shape the developers of tomorrow.</p>
+                <p>We provide easy templates and assistance in structuring, recording, and uploading your education materials to our online platform.</p>
+                <a href="contact.html" class="btn-primary" style="margin-top: 16px;">Apply as Instructor</a>
+            </div>
+            <div class="about-content" style="border: 1px solid var(--border-color); padding: 40px; background-color: #ffffff;">
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px;">What We Offer Tutors</h3>
+                <ul style="list-style-type: none; display: flex; flex-direction: column; gap: 16px;">
+                    <li style="display: flex; align-items: flex-start; gap: 8px;">
+                        <span>✓</span>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Global distribution and audience reach</p>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 8px;">
+                        <span>✓</span>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Dedicated video recording and production tips</p>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 8px;">
+                        <span>✓</span>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Instructor dashboard to monitor student completion metrics</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
