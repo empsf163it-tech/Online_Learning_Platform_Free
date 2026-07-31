@@ -1,6 +1,19 @@
 // CourseNest Free Tier JS
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+    if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            
+            // Toggle hamburger icon appearance
+            hamburgerBtn.classList.toggle('active');
+        });
+    }
+
     // Contact Form submission handler
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -30,4 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // FAQ Accordion Toggle
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const isOpen = faqItem.classList.toggle('active');
+            question.setAttribute('aria-expanded', isOpen);
+
+            const answer = faqItem.querySelector('.faq-answer');
+            if (isOpen) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = '0px';
+            }
+        });
+    });
 });
